@@ -10,6 +10,7 @@ import { ContentComponent } from './content/content.component';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { CoursesCardComponent } from './courses/courses-card/courses-card.component';
 import { PreviewComponent } from './preview/preview.component';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { PreviewComponent } from './preview/preview.component';
     HeaderComponent,
     FooterComponent,
     CoursesComponent,
+    CoursesCardComponent,
     ContentComponent,
     FormComponent,
     HomeComponent,
