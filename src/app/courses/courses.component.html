@@ -1,1 +1,8 @@
-<p>courses works!</p>
+<div class="courses">
+    <header>Courses</header>
+    <div class="courses__body">
+        <ng-container *ngFor="let course of courseList">
+            <app-courses-card></app-courses-card>
+        </ng-container>
+    </div>
+</div>

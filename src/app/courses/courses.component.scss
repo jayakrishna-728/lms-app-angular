@@ -1,0 +1,17 @@
+.courses{
+    padding: 10px 0;
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+    &__body{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+}

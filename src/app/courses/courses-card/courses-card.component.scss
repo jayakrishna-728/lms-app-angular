@@ -1,0 +1,14 @@
+.course-card{
+    background-color: #979797;
+    opacity: 0.2;
+    border-radius: 6px;
+    color: #fff;
+    height: 200px;
+    margin: 20px;
+    padding: 10px;
+    width: 400px;
+    transition: transform .5s ease;      
+    &:hover{
+        transform: scale(1.1);
+    }
+}
