@@ -1,6 +1,9 @@
 
 <div class="form-container">
-    <form (ngSubmit)="submitForm()">
+  <div class="form-container__heading">CONTACT</div>
+  <div class="form-container__subheading">Get in Touch</div>
+  <div class="form-container__desc">Ask us any questions and we will respond to you within 1 business day.</div>
+  <form (ngSubmit)="submitForm()">
         <div class="form-group">
           <label for="firstName">First Name</label>
           <input type="text" id="firstName" name="firstName" [(ngModel)]="formData.firstName" required>
@@ -18,5 +21,5 @@
           <textarea id="description" name="description" [(ngModel)]="formData.description" required></textarea>
         </div>
         <button type="submit" class="submit-button">Submit</button>
-      </form>
+    </form>
 </div>

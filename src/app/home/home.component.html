@@ -1,7 +1,7 @@
 <div>
     <app-header></app-header>
-    <app-preview></app-preview>
-    <app-form></app-form>
-    <app-courses></app-courses>
+    <app-preview *ngIf="!showContactForm"></app-preview>
+    <app-form *ngIf="showContactForm"></app-form>
+    <app-courses *ngIf="!showContactForm"></app-courses>
 </div>
 
