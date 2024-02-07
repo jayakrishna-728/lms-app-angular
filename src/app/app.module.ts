@@ -10,6 +10,7 @@ import { ContentComponent } from './content/content.component';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { PreviewComponent } from './preview/preview.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     CoursesComponent,
     ContentComponent,
     FormComponent,
-    HomeComponent
+    HomeComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,
