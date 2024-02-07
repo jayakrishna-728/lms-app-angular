@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "lms-angular-app"
+  "defaultProject": "lms-angular-app",
+  "cli": {
+    "analytics": "2322fa6d-d765-46e5-b83f-a8884139055e"
+  }
 }

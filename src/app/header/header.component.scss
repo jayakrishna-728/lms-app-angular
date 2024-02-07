@@ -1,0 +1,92 @@
+
+.container{
+    .header{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0% 20%;
+        align-items: center;
+        border-bottom: 1px solid rgb(255, 191, 35);
+        &__companyname{
+            flex: 1;
+            padding: 2% 0;
+            color: black;
+            &__text{
+                font-size: 24px;
+                font-weight: 700;
+                padding-bottom: 5px;
+                letter-spacing: 1px;
+                &:hover{
+                    color: rgb(255, 191, 35);
+                    transform: scale(1);
+                    transition: all .4s ease-in;
+                    cursor: pointer;
+                }
+            }
+            &__description{
+                font-size: 18px;
+                font-size: 600;
+            }
+        }
+        &__submenu{
+            flex:1.5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            div{
+                font-size: 17px;
+                font-weight: 500;
+                padding: 0px 10px;
+            }
+            
+        }
+        &__getstarted{
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            div{
+                background: rgb(255, 191, 35);
+                color: black;
+                cursor: pointer;
+                text-align: center;
+                border-radius: 6px;
+                padding: 14px 15px;
+                min-width: 150px;
+                max-width: 200px;
+                font-size: 15px;
+                font-weight: 700;
+                border: 2px solid black;
+                &:hover{
+                    color: rgb(255, 191, 35);
+                    background: black;
+                    transform: scale(1);
+                    transition: all .4s ease-in;
+                    cursor: pointer;
+                    border: 2px solid rgb(255, 191, 35);
+                }
+            }
+
+        }
+
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        .header{
+            width: 100%;
+            padding: 0 0;
+            border-bottom: 1px solid white;
+            &__companyname{
+                border-right: 0px solid transparent;
+                &__text{
+                    font-size: 18px;
+                }
+                &__description{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+  }
