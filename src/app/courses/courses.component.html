@@ -2,7 +2,7 @@
     <header>Courses</header>
     <div class="courses__body">
         <ng-container *ngFor="let course of courseList">
-            <app-courses-card></app-courses-card>
+            <app-courses-card [courseData]="course"></app-courses-card>
         </ng-container>
     </div>
 </div>

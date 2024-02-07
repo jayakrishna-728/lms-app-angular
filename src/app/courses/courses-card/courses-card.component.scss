@@ -1,14 +1,44 @@
 .course-card{
-    background-color: #979797;
-    opacity: 0.2;
+    background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
     border-radius: 6px;
     color: #fff;
-    height: 200px;
+    height: 250px;
     margin: 20px;
-    padding: 10px;
     width: 400px;
     transition: transform .5s ease;      
     &:hover{
         transform: scale(1.1);
+    }
+    img{
+        height: 160px;
+        width: 100%;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    &__title{
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &__description{
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 16px;
+    }
+    &__info{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+    }
+    &__col{
+        display: flex;
+        flex-direction: column;
+        &--label{
+            font-weight: 600;
+        }
     }
 }
