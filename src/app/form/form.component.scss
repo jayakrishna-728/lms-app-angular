@@ -7,11 +7,34 @@
 
 .left-div, .middle-div, .right-div {
   width: 300px;
-  height: 300px;
+  height: 250px;
   color: white;
   background:black; /* Adjust as needed */
   border-radius: 6px;
   box-shadow: 0 4px 4px rgb(252, 203, 79); /* Box shadow with desired elevation */
+  padding: 20px 15px;
+  &__img{
+    text-align: center;
+    img{
+      height: 70px;
+      width: 70px;
+    }
+  }
+  &__heading{
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 23px;
+    font-weight: 700;
+    color: rgb(252, 203, 79);
+    letter-spacing: 2px;
+  }
+  &__address{
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: 500;
+
+  }
 }
 
 @keyframes slideInFromLeft {
