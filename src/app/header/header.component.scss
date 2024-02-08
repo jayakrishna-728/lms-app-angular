@@ -38,8 +38,19 @@
                 font-weight: 500;
                 padding: 0px 10px;
                 cursor: pointer;
+                &:hover{
+                    transform: scale(1.2);
+                    transition: all .3s ease-in;
+                    color: rgb(255, 191, 35);
+                }
+            }
+            .active{
+                color: rgb(255, 191, 35);
             }
             
+        }
+        &__mobilesubmenu{
+            display: none;
         }
         &__getstarted{
             flex: 1;
@@ -73,21 +84,98 @@
     }
 }
 
+@keyframes slideDown {
+    from {
+        top: -50%;
+    }
+    to {
+        top: 92%;
+    }
+}
 @media only screen and (max-width: 600px) {
     .container {
         .header{
-            width: 100%;
-            padding: 0 0;
-            border-bottom: 1px solid white;
+            padding: 0px 10px;
+            height: 70px;
+            position: relative;
             &__companyname{
-                border-right: 0px solid transparent;
+                padding: 1% 0;
                 &__text{
-                    font-size: 18px;
+                    font-size: 20px;
+                    padding-bottom: 3px;
                 }
                 &__description{
-                    font-size: 12px;
+                    font-size: 14px;
+                    font-size: 600;
+                }
+                z-index: 0.5;
+            }
+            &__getstarted{
+                display: none;
+            }
+            &__mobilesubmenu{
+                display: block;
+                div{
+                    padding: 8px 9px;
+                    background:rgb(255, 191, 35);
+                    border-radius: 4px;
+                }
+                img{
+                    height: 23px;
+                    width: 23px;
+                }
+                span{
+                    padding: 2px 4px;
+                    font-size: 20px;
+                    font-weight: 700;
                 }
             }
+            
+            &__msubmenu{
+            animation: slideDown 0.9s ease 0.1s;
+            display: block;
+            background: white;
+            position: absolute;
+            right: 0px;
+            left: 0px;
+            top: 92%;
+            // top: 92%;
+            z-index: 1;
+            border-bottom: 2px solid rgb(255, 191, 35);
+            overflow: hidden;
+            div{
+                    color: black;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding: 10px 25px;
+                 &:hover{
+                        transform: scale(1.2);
+                        transition: all .3s ease-in;
+                        color: rgb(255, 191, 35);
+                }
+            }
+            .active{
+                    color: rgb(255, 191, 35);
+            }
+            }
+            &__submenu{
+                display: none;
+            }
+        }
+
+    }
+    .open{
+        animation-duration: 0.9s; /* Adjust duration as needed */
+    }
+
+  }
+  @media only screen and (max-width: 1200px) {
+    .container {
+        .header{
+            &__getstarted{
+                display: none;
+            }
+            
         }
     }
   }
