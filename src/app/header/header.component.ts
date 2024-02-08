@@ -53,6 +53,19 @@ export class HeaderComponent implements OnInit {
   }
 
   navigate(element: string){
+    if(element =='courses'){
+      this.isCourses=true;
+      this.isAboutUs=false;
+      this.homeActive=false;
+      this.isTestimonials=false;
+      this.isContactus=false;
+    } else if(element == 'testimonials'){
+      this.isTestimonials=true;
+      this.isCourses=true;
+      this.isAboutUs=false;
+      this.homeActive=false;
+      this.isContactus=false;
+    }
     if(document.getElementById(element)!=null){
       document.getElementById(element)?.scrollIntoView({
       behavior: "smooth",

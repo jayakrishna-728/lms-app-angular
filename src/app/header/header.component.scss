@@ -149,8 +149,8 @@
                     font-weight: 500;
                     padding: 10px 25px;
                  &:hover{
-                        transform: scale(1.2);
-                        transition: all .3s ease-in;
+                        transform: unset;
+                        transition: unset;
                         color: rgb(255, 191, 35);
                 }
             }

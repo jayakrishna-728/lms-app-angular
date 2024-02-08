@@ -100,7 +100,7 @@
         &__desc{
             position: relative;
             padding: 20px 5px 10px 0px;
-            height: 200px;
+            height: 120px;
             &__text{
                 font-size: 10px;
                 font-weight: 400;
@@ -142,11 +142,11 @@
             }
             &__movimg{
                 img {
-                    height: 150px;
-                    width: 150px;
+                    height: 120px;
+                    width: 120px;
                     position: absolute;
-                    top: 30%;
-                    left:30%;
+                    top: 25%;
+                    left:20%;
                     animation: moveRight 2s linear infinite; /* Adjust animation duration and timing function as needed */
                   }
                   @keyframes moveRight {
@@ -157,6 +157,30 @@
                       transform: translateX(100%); /* Adjust the distance the image should move */
                     }
                   }
+            }
+        }
+        &__video{
+            width: 100%;
+            position: relative;
+            &__tag{
+                width: 100%;
+                opacity: 0.2;
+            }
+            &__text{
+                position: absolute;
+                top: 10%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                &__left{
+                    font-size: 20px;
+                    width: 100%;
+                }
+                &__right{
+                    padding-top: 30px;
+                    font-size: 12px;
+                    width: 100%;
+                }
             }
         }
 
