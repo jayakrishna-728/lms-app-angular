@@ -11,14 +11,14 @@
             <div [ngClass]="{'active': isTestimonials}">Testimonials</div>
             <div [ngClass]="{'active': isContactus}" (click)="openContactForm()">Contact us</div>
         </div>
-        <div class="header__mobilesubmenu">
-            <div (click)="openSubmenu()">
-                <ng-container *ngIf="mobileSubmenu">
-                    <span>X</span>
-                </ng-container>
-                <ng-container *ngIf="!mobileSubmenu">
-                    <img src="assets/hambergur.png"/>
-                </ng-container>
+        <div  *ngIf="mobileSubmenu" class="header__mobilesubmenu">
+            <div>
+                <span (click)="closeSubMenu()">X</span>
+            </div>
+        </div>
+        <div  *ngIf="!mobileSubmenu" class="header__mobilesubmenu">
+            <div>
+                <img (click)="openSubmenu()" src="assets/hambergur.png"/>
             </div>
         </div>
         <div  *ngIf="mobileSubmenu" class="header__msubmenu" [ngClass]="{'open': mobileSubmenu}">

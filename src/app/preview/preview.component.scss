@@ -50,6 +50,9 @@
         }
         &__movimg{
             img {
+                height:200px;
+                opacity: 0.4;
+                width:200px;
                 position: absolute;
                 top: 30%;
                 left:40%;
@@ -89,43 +92,74 @@
             }
         }
     }
-    &__text{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        &__left{
-            
-        }
-        &__right{
-
-        }
-    }
   }
   
-//   #video-background {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-  
-//   .overlay {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-  
-//   .text {
-//     color: white;
-//     font-size: 2rem;
-//     text-align: center;
-//     /* Additional styles as needed */
-//   }
-  
+  @media only screen and (max-width: 600px) {
+    .video-container{
+        padding: 0 2%;
+        &__desc{
+            position: relative;
+            padding: 20px 5px 10px 0px;
+            height: 200px;
+            &__text{
+                font-size: 10px;
+                font-weight: 400;
+                border-right: .10em solid rgb(255, 191, 35); /* The typewriter cursor */
+                animation: typing 2.5s steps(30, end), blink-caret .5s step-end infinite;
+                margin: 0 auto;
+                display: inline-block;
+                span{
+                    font-weight: 700;
+                }
+                /* Keyframes for the typing effect */
+                @keyframes typing {
+                    from {
+                    width: 0;
+                    }
+                    to {
+                    width: 100%;
+                    }
+                }
+                /* Keyframes for the blinking cursor effect */
+                @keyframes blink-caret {
+                    from, to {
+                    border-color: transparent;
+                    }
+                    50% {
+                    border-color: rgb(255, 191, 35);
+                    }
+                }
+            }
+            &__obj{
+                display: flex;
+                width: 50%;
+                div{
+                    padding-top: 20px;
+                    padding-right: 15px;
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+            &__movimg{
+                img {
+                    height: 150px;
+                    width: 150px;
+                    position: absolute;
+                    top: 30%;
+                    left:30%;
+                    animation: moveRight 2s linear infinite; /* Adjust animation duration and timing function as needed */
+                  }
+                  @keyframes moveRight {
+                    0% {
+                      transform: translateX(0);
+                    }
+                    100% {
+                      transform: translateX(100%); /* Adjust the distance the image should move */
+                    }
+                  }
+            }
+        }
+
+    }
+
+  }
