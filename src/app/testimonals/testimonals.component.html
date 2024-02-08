@@ -1,0 +1,12 @@
+<div class="testimonals" id="testimonals">
+    <header>Testimonals</header>
+    <div class="testimonals__container">
+        <swiper-container navigation="true" pagination="true" pagination-clickable="true" slides-per-view="3" speed="500" loop="true" css-mode="true">
+            <ng-container *ngFor="let testimonal of testimonals">
+                <swiper-slide>
+                    <img [src]="testimonal.img" alt=""/>
+                </swiper-slide>
+            </ng-container>
+        </swiper-container>
+    </div>
+</div>

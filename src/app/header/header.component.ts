@@ -51,4 +51,14 @@ export class HeaderComponent implements OnInit {
   closeSubMenu(){
     this.mobileSubmenu=false;
   }
+
+  navigate(element: string){
+    if(document.getElementById(element)!=null){
+      document.getElementById(element)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+      });
+    }
+  }
 }
