@@ -7,8 +7,8 @@
         <div class="header__submenu">
                 <div (click)="navigateHome()">Home</div>
                 <div >About us</div>
-                <div >Courses</div>
-                <div >Testimonials</div>
+                <div (click)="navigate('courses')">Courses</div>
+                <div (click)="navigate('testimonals')">Testimonials</div>
                 <div (click)="openContactForm()">Contact us</div>
         </div>
         <div class="header__getstarted">

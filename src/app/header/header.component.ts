@@ -22,4 +22,14 @@ export class HeaderComponent implements OnInit {
   navigateHome(){
     this.sharedService.navigateHome();
   }
+
+  navigate(element: string){
+    if(document.getElementById(element)!=null){
+      document.getElementById(element)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+      });
+    }
+  }
 }

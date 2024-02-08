@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { CoursesCardComponent } from './courses/courses-card/courses-card.component';
 import { PreviewComponent } from './preview/preview.component';
+import { TestimonalsComponent } from './testimonals/testimonals.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PreviewComponent } from './preview/preview.component';
     ContentComponent,
     FormComponent,
     HomeComponent,
-    PreviewComponent
+    PreviewComponent,
+    TestimonalsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ import { PreviewComponent } from './preview/preview.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
