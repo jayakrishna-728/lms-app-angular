@@ -7,7 +7,7 @@
         <div class="header__submenu">
             <div [ngClass]="{'active': homeActive}" (click)="navigateHome()">Home</div>
             <div [ngClass]="{'active': isAboutUs}" (click)="navigateAboutus()">About us</div>
-            <div [ngClass]="{'active': isCourses}" (click)="navigate('courses')">Courses</div>
+            <div [ngClass]="{'active': isCourses}" (click)="navigateCourses()">Courses</div>
             <div [ngClass]="{'active': isTestimonials}" (click)="navigate('testimonals')">Testimonials</div>
             <div [ngClass]="{'active': isContactus}" (click)="openContactForm()">Contact us</div>
         </div>
