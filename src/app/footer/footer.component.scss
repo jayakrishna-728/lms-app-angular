@@ -1,0 +1,45 @@
+.footer{
+    background: #000000;
+    color: #ffffff;
+    padding: 0 20% 20px; 
+    &__companyname{
+        flex: 1;
+        padding: 2% 0;
+        &__text{
+            font-size: 24px;
+            font-weight: 700;
+            padding-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        &__description{
+            font-size: 18px;
+            font-size: 600;
+        }
+    }
+    &__container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    &__col{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        // flex: 1;
+        h4{
+            font-size: 16px;
+            font-weight: 600;
+            padding: 0;
+            margin: 0 0 10px 0;
+        }
+        p{
+            font-size: 14px;
+            line-height: 8px;
+            font-weight: 400;
+        }
+    }
+    &__note{
+        text-decoration: underline;
+        padding-bottom: 10px;
+    }
+}
