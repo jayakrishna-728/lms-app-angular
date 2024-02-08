@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
 
 
   openContactForm(){
-    this.sharedService.navigateContactForm();
+    this.router.navigateByUrl('/contactus');
     this.isContactus=true;
     this.homeActive=false;
     this.isAboutUs=false;
@@ -35,10 +35,20 @@ export class HeaderComponent implements OnInit {
 
 
   navigateHome(){
-    this.sharedService.navigateHome();
+    this.router.navigateByUrl('/home');
     this.isContactus=false;
     this.homeActive=true;
     this.isAboutUs=false;
+    this.isCourses=false;
+    this.isTestimonials=false;
+    this.mobileSubmenu=false;
+  }
+
+  navigateAboutus(){
+    this.router.navigateByUrl('/about');
+    this.isAboutUs=true;
+    this.isContactus=false;
+    this.homeActive=false;
     this.isCourses=false;
     this.isTestimonials=false;
     this.mobileSubmenu=false;
@@ -61,7 +71,7 @@ export class HeaderComponent implements OnInit {
       this.isContactus=false;
     } else if(element == 'testimonials'){
       this.isTestimonials=true;
-      this.isCourses=true;
+      this.isCourses=false;
       this.isAboutUs=false;
       this.homeActive=false;
       this.isContactus=false;

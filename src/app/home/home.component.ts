@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { AppService } from '../app.service';
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,13 +6,9 @@ import { AppService } from '../app.service';
 })
 export class HomeComponent implements OnInit {
 
-  showContactForm: boolean = false;
-  private subscription: Subscription;
 
-  constructor(private sharedService: AppService) {
-    this.subscription = this.sharedService.showContactForm$.subscribe(showContactForm => {
-      this.showContactForm = showContactForm;
-    });
+  constructor() {
+  
   }
 
   ngOnInit(): void {
@@ -23,7 +16,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    
   }
 
 }
