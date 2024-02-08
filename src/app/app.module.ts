@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { CoursesCardComponent } from './courses/courses-card/courses-card.component';
 import { PreviewComponent } from './preview/preview.component';
 import { TestimonalsComponent } from './testimonals/testimonals.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TestimonalsComponent } from './testimonals/testimonals.component';
     FormComponent,
     HomeComponent,
     PreviewComponent,
-    TestimonalsComponent
+    TestimonalsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

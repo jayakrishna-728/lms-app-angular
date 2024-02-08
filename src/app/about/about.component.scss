@@ -1,0 +1,106 @@
+.aboutus{
+    display: flex;
+    justify-content: center;
+    padding: 20px 20%;
+    background: rgb(255, 191, 35);
+    &__content{
+        color: white;
+        font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        animation: slideFromLeft 1s ease-in-out forwards; /* Animate content from left */
+        transform: translateX(-100%); /* Initially position content outside the viewport */
+        &__heading{
+            padding-top: 30px;
+            font-size: 35px;
+            font-weight: 700;
+        }
+        &__subheading{
+            padding-top: 15px;
+            font-size: 43px;
+            font-weight: 500;
+        }
+        &__text{
+            padding-top: 30px;
+            line-height: 40px;
+            letter-spacing: 0.5px;
+            font-size: 18px
+        }
+
+    }
+    &__img{
+        display: flex;
+        align-items: center;
+        animation: slideFromRight 1s ease-in-out forwards; /* Animate image from right */
+        transform: translateX(100%); /* Initially position image outside the viewport */
+        img{
+            height: 400px;
+            width: 400px;
+            opacity: 0.7;
+            animation: rotateImage 25s linear infinite;
+        }
+    }
+    
+}
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rotateImage {
+    to {
+        transform: rotate(360deg);
+    }
+}
+@media only screen and (max-width: 600px) {
+    .aboutus{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 2%;
+        &__content{
+            &__heading{
+                padding-top: 20px;
+                font-size: 25px;
+                font-weight: 700;
+            }
+            &__subheading{
+                padding-top: 10px;
+                font-size: 33px;
+                font-weight: 500;
+            }
+            &__text{
+                padding-top: 20px;
+                line-height: 30px;
+                letter-spacing: 0.5px;
+                font-size: 14px
+            }
+    
+        }
+        &__img{
+            display: flex;
+            align-items: center;
+            animation: slideFromRight 1s ease-in-out forwards; /* Animate image from right */
+            transform: translateX(100%); /* Initially position image outside the viewport */
+            img{
+                height: 200px;
+                width: 200px;
+                opacity: 0.7;
+                animation: rotateImage 25s linear infinite;
+            }
+        }
+        
+    }    
+}
