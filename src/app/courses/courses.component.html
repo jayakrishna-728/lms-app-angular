@@ -1,5 +1,17 @@
 <div class="courses" id="courses">
-    <header>Courses</header>
+    <header>Basic</header>
+    <div class="courses__body">
+        <ng-container *ngFor="let course of courseList">
+            <app-courses-card [courseData]="course"></app-courses-card>
+        </ng-container>
+    </div>
+    <header>Intermediate</header>
+    <div class="courses__body">
+        <ng-container *ngFor="let course of courseList">
+            <app-courses-card [courseData]="course"></app-courses-card>
+        </ng-container>
+    </div>
+    <header>Advanced</header>
     <div class="courses__body">
         <ng-container *ngFor="let course of courseList">
             <app-courses-card [courseData]="course"></app-courses-card>

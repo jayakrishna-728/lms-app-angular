@@ -92,6 +92,16 @@ export class HeaderComponent implements OnInit {
     this.mobileSubmenu=false;
   }
 
+  navigateCourses(){
+    this.router.navigateByUrl('/courses');
+    this.isAboutUs=false;
+    this.isContactus=false;
+    this.homeActive=false;
+    this.isCourses=true;
+    this.isTestimonials=false;
+    this.mobileSubmenu=false;
+  }
+
 
   openSubmenu(){
     this.mobileSubmenu=true;
