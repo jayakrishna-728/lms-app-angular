@@ -20,6 +20,44 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.homeActive=true;
+    let currentRoute = this.router.url;
+    console.log(currentRoute);
+    if(currentRoute.includes("contact")){
+      this.isContactus=true;
+      this.homeActive=false;
+      this.isAboutUs=false;
+      this.isCourses=false;
+      this.isTestimonials=false;
+      this.mobileSubmenu=false;
+    } else if(currentRoute.includes("home")){
+      this.homeActive=true;
+      this.isContactus=false;
+      this.isAboutUs=false;
+      this.isCourses=false;
+      this.isTestimonials=false;
+      this.mobileSubmenu=false;
+    } else if(currentRoute.includes("courses")){
+      this.homeActive=false;
+      this.isContactus=false;
+      this.isAboutUs=false;
+      this.isCourses=true;
+      this.isTestimonials=false;
+      this.mobileSubmenu=false;
+    } else if(currentRoute.includes("testimonials")){
+      this.homeActive=false;
+      this.isContactus=false;
+      this.isAboutUs=false;
+      this.isCourses=false;
+      this.isTestimonials=true;
+      this.mobileSubmenu=false;
+    } else if(currentRoute.includes("about")){
+      this.homeActive=false;
+      this.isContactus=false;
+      this.isAboutUs=true;
+      this.isCourses=false;
+      this.isTestimonials=false;
+      this.mobileSubmenu=false;
+    } 
   }
 
 

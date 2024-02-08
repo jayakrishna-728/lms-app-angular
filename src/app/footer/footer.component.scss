@@ -1,12 +1,13 @@
 .footer{
     background: #000000;
     color: #ffffff;
-    padding: 0 20% 20px; 
+    // box-shadow: 10px 10px 4px #fccb4f;
+    padding: 20px 10%; 
     &__companyname{
         flex: 1;
-        padding: 2% 0;
+        padding: 20px 0 40px 0px;
         &__text{
-            font-size: 24px;
+            font-size: 30px;
             font-weight: 700;
             padding-bottom: 5px;
             letter-spacing: 1px;
@@ -18,28 +19,51 @@
     }
     &__container{
         display: flex;
-        flex-wrap: wrap;
-        gap: 50px;
+        justify-content: space-between;
     }
     &__col{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        // flex: 1;
-        h4{
-            font-size: 16px;
-            font-weight: 600;
+        &__header{
+            font-size: 20px;
+            font-weight: 700;
             padding: 0;
             margin: 0 0 10px 0;
+            display: flex;
+            justify-content: start;
+            div{
+                display: flex;
+                justify-content: start;
+                padding-right: 17px;
+                img{
+                    height: 25px;
+                    width: 25px;
+                }
+            }
         }
-        p{
+        &__text{
             font-size: 14px;
-            line-height: 8px;
+            line-height: 30px;
             font-weight: 400;
         }
     }
     &__note{
         text-decoration: underline;
         padding-bottom: 10px;
+    }
+}
+.active{
+    background: #ffc83c;
+}
+@media only screen and (max-width: 600px) {
+    .footer{
+        &__container{
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__col{
+            padding-top: 30px;
+        }
     }
 }
